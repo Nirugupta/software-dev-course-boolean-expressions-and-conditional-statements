@@ -48,15 +48,14 @@ const choice = readline
 if (choice.toLowerCase() === "mountains") {
   // Nested conditional: check for the torch if they go to the mountains
   if (hasTorch) {
-  if (hasTorch) {
     console.log("You use your torch to see and safely cross the mountains.");
   } else {
     console.log(
       "It's too dark! You trip and have to turn back without a torch.",
     );
   }
-  } else if (choice.toLowerCase() === "village") {
-    //see if they have the map for the village path
+} else if (choice.toLowerCase() === "village") {
+  //see if they have the map for the village path
   if (hasMap) {
     console.log("You find your way to the village safely.");
   } else {
@@ -64,9 +63,9 @@ if (choice.toLowerCase() === "mountains") {
       "Without a map, you wander for hours before finding the village, exhausted.",
     );
   }
-  } else if (choice.toLowerCase() === "forest") {
-    // Complex logic: check for compass first, then sword and torch together using logical operators
-  if (hasCompass) {
+} else if (choice.toLowerCase() === "forest") {
+  // Complex logic: check for compass first, then sword and torch together using logical operators
+
   if (hasCompass) {
     console.log(
       "Point your compass to West! You find a secret shortcut through the trees.",
@@ -80,9 +79,11 @@ if (choice.toLowerCase() === "mountains") {
       "The forest is too thick. Without a compass or tools, you get lost.",
     );
   }
-  } else {
-    //If user enters anything else other than listed options.
-  console.log("Your selection is not part of this adventure game. Thanks for playing!");
+} else {
+  //If user enters anything else other than listed options.
+  console.log(
+    "Your selection is not part of this adventure game. Thanks for playing!",
+  );
 }
 
 /* 
